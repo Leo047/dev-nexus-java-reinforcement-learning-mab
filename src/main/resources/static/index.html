@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinforcement Learning Demo</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <header class="header">
+        <h1>Reinforcement Learning - MAB Demo</h1>
+        <p>Reinforcement Learning with Multi-Armed Bandits</p>
+
+        <section class="login-section">
+            <div class="login-container">
+                <h2>Welcome, <span id="username">Guest</span></h2>
+                <button id="loginButton">Log In</button>
+                <button id="logoutButton" style="display: none;">Log Out</button>
+            </div>
+        </section>
+    </header>
+</head>
+
+<body>
+
+
+
+<section class="ads-section">
+    <h2>Personalized Ads</h2>
+    <div id="adsContainer" class="ads-container">
+        <!-- Ads will be dynamically populated here -->
+    </div>
+</section>
+<form action="api/v1/ads/performance" method="get">
+    <button type="submit" class="performance-link">View Performance Metrics</button>
+</form>
+<script src="javascript/script.js"></script>
+</body>
+</html>

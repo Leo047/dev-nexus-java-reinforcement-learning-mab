@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Ad Data</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <header class="header">
+        <h1>Reinforcement Learning - MAB Demo</h1>
+        <p>Experience the power of Reinforcement Learning with Multi-Armed Bandits</p>
+
+    </header>
+</head>
+<body>
+<h1>User Ad Data</h1>
+<h2>Ad Selections</h2>
+<table>
+    <thead>
+    <tr>
+        <th>User ID</th>
+        <th>Ad Selections</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="entry : ${userAdSelections}">
+        <td th:text="${entry.key}"></td>
+        <!--        <td th:text="${entry.value}"></td>-->
+        <td>
+            <table class="nested-table">
+                <thead>
+                <tr>
+                    <th>Ad ID</th>
+                    <th>Reward</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="adEntry : ${entry.value}">
+                    <td th:text="${adEntry.key}"></td>
+                    <td th:text="${adEntry.value}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
