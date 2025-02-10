@@ -53,4 +53,3 @@ This project demonstrates a Multi-Armed Bandit (MAB) implementation using Java a
 ## License
 
 This project is licensed under the MIT License - see the `LICENSE` file for details.
-![image](https://github.com/user-attachments/assets/dec827f5-d81a-424d-a8a4-3efc803f0bc3)
